@@ -22,5 +22,5 @@ border-radius:50%;
 
 
 outline:none;
-border-right:20px solid rgba(255, 255, 255, 0.4);
+border:2px solid rgba(255, 255, 255, 0.4);
 `
