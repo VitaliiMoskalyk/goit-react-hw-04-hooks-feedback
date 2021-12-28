@@ -10,13 +10,15 @@ class App extends Component {
     bad: 0,
   };
   
-  
+  colors = [{"good":"#006400"},{"neutral":"#FFD700"},{"bad":"#FF0000"}]
+    
   FeedbackWriter = (kind) =>
     this.setState((prevState) => ({ [kind]: prevState[kind] + 1 }));
 
   CountTotalFeedback = () => {
     const { good, bad, neutral } = this.state;
     return good + bad + neutral;
+    
   };
   
   CountPositiveFeedbackPercentage = () =>
@@ -24,15 +26,13 @@ class App extends Component {
 
   render() {
     const { good, neutral, bad } = this.state;
-    const colors = ["#006400", "#FFD700", "#FF0000"];
-    const options = ["good", "neutral", "bad"];
-
+ 
     return (
        <Section title={"Please leave your feedback"}>
         <FeedbackOptions
-          options={options}
+          options={this.colors}
           onLeaveFeedback={this.FeedbackWriter}
-          colors={colors} />
+           />
         <Statistic
           good={good}
           bad={bad}
