@@ -1,5 +1,5 @@
 {
-  "name": "goit-react-hw-02-feedback",
+  "name": "goit-react-hw-04-hooks-feedback",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,7 +16,7 @@
     "react-scripts": "5.0.0",
     "web-vitals": "^2.1.2"
   },
-  "homepage": "https://VitaliiMoskalyk.github.io/goit-react-hw-02-feedback",
+  "homepage": "https://VitaliiMoskalyk.github.io/goit-react-hw-04-hooks-feedback",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

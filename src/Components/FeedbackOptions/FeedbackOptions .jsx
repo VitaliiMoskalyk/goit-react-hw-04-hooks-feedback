@@ -5,14 +5,17 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <ButtonList>
       {options.map((option) => {
+        const oKey = Object.keys(option);
+        const oValue = Object.values(option);
+
         return (
-          <ButtonWrapper key={Object.keys(option)}>
+          <ButtonWrapper key={oKey}>
             <Buttons
               type="button"
-              onClick={() => onLeaveFeedback(Object.keys(option))}
-              style={{ backgroundColor: Object.values(option) }}
+              onClick={() => onLeaveFeedback(oKey.toString())}
+              style={{ backgroundColor: oValue }}
             >
-              {Object.keys(option).toString().toUpperCase()}
+              {oKey.toString().toUpperCase()}
               {/* [0].toUpperCase() + option.value.slice(1) */}
             </Buttons>
           </ButtonWrapper>
